@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'gatsby';
 
 const PostPage = () => {
     return (
@@ -7,3 +8,5 @@ const PostPage = () => {
         </div>
     )
 }
+
+export default PostPage
