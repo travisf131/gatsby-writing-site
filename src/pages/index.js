@@ -1,14 +1,16 @@
 import React from "react"
 import { Link } from 'gatsby';
-import Header from '../components/header';
+import Layout from '../components/layout';
+
 
 const Home = () => {
     return (
         <>
-            <Header/>        
-            <div>
-                <h1>Home</h1>
-            </div>
+            <Layout>
+                <div>
+                    <h1>Home</h1>
+                </div>
+            </Layout>
         </>
         
     )

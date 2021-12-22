@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from 'gatsby';
+import Layout from '../components/layout';
 
 const BooksPage = () => {
     return (
-        <div> This will be the page that has book reviews and analyses</div>
+        <>
+            <Layout>
+                <div> This will be the page that has book reviews and analyses</div>
+            </Layout>
+        </>
     )
 }
 

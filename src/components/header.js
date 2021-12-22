@@ -19,9 +19,9 @@ const Header = () => {
         <div className={container}> 
             <span className={font}>Existence is weird</span>
             <div className={links}>
-                <Link className={link} to="../pages/blog">Articles</Link>
-                <Link className={link} to="../pages/books">Books</Link>
-                <Link className={link} to="../pages/about">About</Link>
+                <Link className={link} to="../blog">Articles</Link>
+                <Link className={link} to="../books">Books</Link>
+                <Link className={link} to="../about">About</Link>
             </div> 
             <Button
                 id="basic-button"
