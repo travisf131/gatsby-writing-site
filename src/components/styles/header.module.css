@@ -39,10 +39,6 @@
     color: #f0d199;
 }
 
-.hamburger {
-    display: none;
-}
-
 .HamburgerLink {
     text-decoration: none;
     color: black;
@@ -55,7 +51,7 @@
     padding-right: 30px;
 }
 
-@media screen and (min-width: 0px) and (max-width: 700px) {
+@media screen and (min-width: 0px) and (max-width: 600px) {
     .links {
         display: none;
     }
@@ -69,9 +65,9 @@
     }
   }
 
-  @media screen and (min-width: 701px) and (max-width: 3000px) {
+  @media screen and (min-width: 601px) and (max-width: 3000px) {
     .links {
-        display: none;
+        display: block;
     }
     .hamburger {
         display: none;

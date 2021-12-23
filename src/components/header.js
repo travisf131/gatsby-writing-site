@@ -23,16 +23,17 @@ const Header = () => {
                 <Link className={link} to="../books">Books</Link>
                 <Link className={link} to="../about">About</Link>
             </div> 
+            <div className={hamburger}>
             <Button
                 id="basic-button"
                 aria-controls="basic-menu"
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
-                className={hamburger}
             >
                 ☰
             </Button>
+            </div>
             <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
