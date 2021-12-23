@@ -11,7 +11,7 @@
 .container {
     background-color: rgba(175, 100, 1, 0.726);
     height: 70px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     padding: 0;
 
     display: flex;
@@ -35,6 +35,10 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.link:hover {
+    color: #f0d199;
+}
+
 .hamburger {
     display: none;
 }
@@ -51,7 +55,7 @@
     padding-right: 30px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 0px) and (max-width: 700px) {
     .links {
         display: none;
     }
@@ -62,5 +66,19 @@
     }
     .font {
         font-size: 22px;
+    }
+  }
+
+  @media screen and (min-width: 701px) and (max-width: 3000px) {
+    .links {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+    .font {
+        font-size: 20px;
     }
   }

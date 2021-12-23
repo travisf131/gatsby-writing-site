@@ -1,11 +1,20 @@
 import React from "react";  
-import { container, font, link, links, hamburger, HamburgerLink } from '../components/styles/header.module.css';
+import { footer, divider, footerLinks, link } from '../components/styles/footer.module.css';
 import { Link } from 'gatsby';
 import { Menu, MenuItem, Button } from '@material-ui/core';
 
 const Footer = () => {
     return (
-        <div>Created by Trevor Flanagan --- Contact me <Link to="../contact">here</Link></div>
+       <>
+         <div className={divider}>______________________________________________________ </div>
+         <div className={footer}>Created by Trevor Flanagan, © 2021 </div>
+         <div className={footerLinks}>
+           <div>
+           <Link className={link} to="../contact"> Contact me</Link>
+           <Link className={link} to="../about"> About</Link>
+           <Link className={link} to="../"> Home</Link></div>
+         </div>
+       </>
     )
 }
 
