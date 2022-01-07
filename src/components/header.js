@@ -1,9 +1,19 @@
 import React from "react";  
 import { container, font, link, links, hamburger, HamburgerLink } from '../components/styles/header.module.css';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import { Menu, MenuItem, Button } from '@material-ui/core';
 
 const Header = () => {
+
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `);
     
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -17,7 +27,7 @@ const Header = () => {
     return (
     
         <div className={container}> 
-            <span className={font}>Existence is weird</span>
+            <span className={font}>{data.site.siteMetadata.title}</span>
             <div className={links}>
                 <Link className={link} to="../blog">Articles</Link>
                 <Link className={link} to="../books">Books</Link>
