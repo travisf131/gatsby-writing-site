@@ -41,7 +41,7 @@ module.exports.onCreateNode = ({node, actions}) => {
     res.data.allMarkdownRemark.edges.forEach((edge) => {
         createPage({
             component: blogTemplate,
-            path: `./blog/${edge.node.fields.slug}`,
+            path: `/blog/${edge.node.fields.slug}`,
             context: {
                 slug: edge.node.fields.slug
             }

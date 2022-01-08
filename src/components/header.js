@@ -29,9 +29,9 @@ const Header = () => {
         <div className={container}> 
             <span className={font}>{data.site.siteMetadata.title}</span>
             <div className={links}>
-                <Link className={link} to="../blog">Articles</Link>
-                <Link className={link} to="../books">Books</Link>
-                <Link className={link} to="../about">About</Link>
+                <Link className={link} to="/blog-list">Articles</Link>
+                <Link className={link} to="/books">Books</Link>
+                <Link className={link} to="/about">About</Link>
             </div> 
             <div className={hamburger}>
             <Button
