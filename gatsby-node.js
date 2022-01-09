@@ -1,6 +1,10 @@
 const { create } = require('domain');
 const path = require('path');
 
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+  })
+
 module.exports.onCreateNode = ({node, actions}) => {
     const { createNodeField } = actions;
 
