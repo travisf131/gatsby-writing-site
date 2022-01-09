@@ -1,7 +1,7 @@
 import React from "react";
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import Layout from '../components/layout';
-import { blogPreview, blogTitle } from './pagesStyles/blogPage.module.css';
+import { blogPreview, blogTitle, articleLink, date, mobileHiddenHeader } from './pagesStyles/blogPage.module.css';
 
 const BlogPage = () => {
     const data = useStaticQuery(graphql`
@@ -12,6 +12,9 @@ const BlogPage = () => {
                         frontmatter {
                             title
                             date
+                        },
+                        fields {
+                            slug
                         }
                     }
                 }
@@ -23,10 +26,12 @@ const BlogPage = () => {
     var blogList = [];
 
     blogPosts.forEach(blog => {
+        let slug = blog.node.fields.slug;
+        let blogPath = "/blog/" + slug;
         blogList.push(
             <div className={blogPreview}>
-                <h1 className={blogTitle}>{blog.node.frontmatter.title}</h1>
-                 <p>{blog.node.frontmatter.date}</p>
+                <Link to={blogPath} className={articleLink}> <h1 className={blogTitle}>{blog.node.frontmatter.title}</h1> </Link>
+                 <p className={date}>{blog.node.frontmatter.date}</p>
             </div>
         );
     })
@@ -34,6 +39,7 @@ const BlogPage = () => {
     return (
         <div>
             <Layout>
+              <div className={mobileHiddenHeader}><p>~~ Articles ~~</p></div>
               {blogList}
             </Layout>
         </div>

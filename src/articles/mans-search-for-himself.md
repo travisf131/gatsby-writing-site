@@ -1,4 +1,4 @@
 --- 
 title: "Man's Search For Himself"
-date: "December 22, 2021"
+date: "August 14, 2021"
 ---

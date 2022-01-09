@@ -11,7 +11,7 @@
 .container {
     background-color: rgba(175, 100, 1, 0.726);
     height: 60px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     padding: 0;
 
     display: flex;
@@ -24,6 +24,15 @@
     font-size: 30px;
     padding-left: 30px;
     padding-right: 55px;
+    text-decoration: none;
+}
+
+.titleLink {
+    text-decoration: none;
+}
+
+.titleLink:visited {
+    color: inherit;
 }
 
 .link {
@@ -61,7 +70,7 @@
         margin-right: 30px;
     }
     .font {
-        font-size: 22px;
+        font-size: 20px;
     }
   }
 

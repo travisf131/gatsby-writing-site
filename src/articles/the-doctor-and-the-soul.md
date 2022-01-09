@@ -3,6 +3,10 @@ title: "The Doctor and the Soul"
 date: "December 22, 2021"
 ---
 
+![Viktor Frankl](../img/frankl.jpeg)
+
+<p>&nbsp;</p>
+
 ## On the Meaning of Life
 
 Logotherapy, and existential analysis more generally, centers on the assumption of man’s fundamental responsibility. It therefore aims to make people more conscious of this very responsibility towards life. 

@@ -1,4 +1,4 @@
 --- 
 title: "Escape From Freedom"
-date: "December 22, 2021"
+date: "October 12, 2021"
 ---

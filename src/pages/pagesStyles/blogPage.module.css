@@ -4,8 +4,48 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    background-color: rgba(133, 86, 16, 0.212);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.blogPreview:hover {
+    background-color: rgba(175, 100, 1, 0.479);
 }
 
 .blogTitle {
     font-size: 22px;
 }
+
+.articleLink {
+    text-decoration: none;
+    width: 100%;
+}
+
+.articleLink:visited {
+    color: inherit;
+}
+
+.articleLink:hover {
+    color: rgb(116, 66, 1);
+}
+
+.date {
+    font-size: 14px;
+}
+
+.mobileHiddenHeader {
+    display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+    .mobileHiddenHeader {
+        display: block;
+        font-size: 26px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
