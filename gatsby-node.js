@@ -5,21 +5,8 @@ require("dotenv").config({
     path: `.env.${process.env.NODE_ENV}`,
   })
 
-module.exports.onCreateNode = ({node, actions}) => {
-    const { createNodeField } = actions;
 
-    if (node.internal.type === "MarkdownRemark") {
-        const slug = path.basename(node.fileAbsolutePath, '.md');
-
-        createNodeField({
-            node,
-            name: "slug",
-            value: slug
-        })
-    }
-}
-
-// this is used to dynamically create new pages for each new post
+// this is used to dynamically create new pages for each new Contentful post
  module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
 
@@ -29,12 +16,10 @@ module.exports.onCreateNode = ({node, actions}) => {
     // 2. Get markdown data
     const res = await graphql(`
         query {
-            allMarkdownRemark {
+            allContentfulArticlePost {
                 edges {
                     node {
-                        fields {
-                            slug
-                        }
+                        slug
                     }
                 }
             }
@@ -42,12 +27,12 @@ module.exports.onCreateNode = ({node, actions}) => {
     `)
 
     // 3. Create new pages
-    res.data.allMarkdownRemark.edges.forEach((edge) => {
+    res.data.allContentfulArticlePost.edges.forEach((edge) => {
         createPage({
             component: blogTemplate,
-            path: `/blog/${edge.node.fields.slug}`,
+            path: `/blog/${edge.node.slug}`,
             context: {
-                slug: edge.node.fields.slug
+                slug: edge.node.slug
             }
         })
     })
